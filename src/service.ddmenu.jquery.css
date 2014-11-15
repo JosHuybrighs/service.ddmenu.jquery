@@ -1,0 +1,93 @@
+﻿.ddMenu {
+  position: relative;
+  display: inline-block;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.ddMenu > span {
+  display: inline-block;
+  position: relative;
+  padding: 0.416em 30px 0.416em 0.416em;
+  color: #074e68;
+  font-size: 1.0em;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid #808080;
+}
+.ddMenu:hover > span,
+.ddMenu.ddMenuOpen > span {
+  color: #fff;
+  background: #497981;
+  border: 2px solid #396971;
+}
+.ddMenu > span:after { /* Little arrow */
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 40%;
+    right: 6px;
+    margin-top: 0;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: #497981 transparent;
+} 
+.ddMenu:hover > span:after,
+.ddMenu.ddMenuOpen > span:after {
+    border-color: #fff transparent;
+}
+
+
+  .ddMenu .ddMenuDropDown {
+    position: absolute;
+    top: 100%;
+    z-index: 200;
+    margin-top: 5px;
+    color: #303030;
+    font-size: 1.1em;
+    background: #fff;
+    border: 2px solid #396971;
+    list-style-type: none;
+    padding-left: 0;
+    overflow: hidden;
+    display: none;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+.ddMenu.ddMenuOpen .ddMenuDropDown {
+    display: block;
+}
+.ddMenu .ddMenuDropDown li {
+    margin: 0;
+    padding: 3px 10px 3px 10px;
+    display: block;
+    line-height: 2.0em;
+    border-bottom: 1px solid #e6e8ea;
+} 
+.ddMenu .ddMenuDropDown li:last-child {
+    border-bottom: none;
+}
+.ddMenu .ddMenuDropDown li:not(.noNav):hover {
+    color: #333333;
+    background: #e0e0e0;
+}
+.ddMenu .ddMenuDropDown li.noNav {
+    cursor: text;
+    font-size: 0.95em;
+    color: #808080;
+}
+ 
+.ddMenu .ddMenuDropDown li a {
+    display: block;
+    text-decoration: none;
+    font-size: inherit;
+    color: inherit;
+}
+.ddMenu .ddMenuDropDown li a:hover {
+    background: none;
+}
