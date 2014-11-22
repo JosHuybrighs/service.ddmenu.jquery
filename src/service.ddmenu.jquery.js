@@ -24,7 +24,7 @@
             // Bind event handlers
             this.dd.on('click.ddMenu', function (event) {
                 // Close possible other open dropdowns
-                var otherOpenObjs = $('.ddMenuOpen').not(this.dd);
+                var otherOpenObjs = $('.ddMenuOpen').not(self.dd);
                 otherOpenObjs.removeClass('ddMenuOpen');
 
                 self.dd.toggleClass('ddMenuOpen');
