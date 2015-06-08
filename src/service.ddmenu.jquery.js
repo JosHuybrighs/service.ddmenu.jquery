@@ -1,5 +1,32 @@
-﻿; (function ($, win, undefined) {
+﻿/****************************************************************************************************** 
+ * A jquery plugin implementing a dropdown menu
+ * 
+ * Version 1.0.0
+ *
+ * This plugin makes it easy to create individual, single-level dropdown menus on a web page.
+ * The dropdown menu itself must be fully designed in HTML (as per an imposed container layout).
+ * The plugin does't insert nor replaces elements in the DOM.
+ * 
+ * Usage: See http://code.cwwonline.be/serviceddmenujquery/
+ *
+ * Change history:
+ *
+ * Version 1.0.0 - First version.
+ *
+ * @requires jQuery 1.8.0 or later
+ *
+ * Copyright (c) Jos Huybrighs
+ * code.cwwonline.be
+ *
+ * Licensed under the MIT license.
+ * http://en.wikipedia.org/wiki/MIT_License
+ *
+ ******************************************************************************************************/
 
+; (function ($, win, undefined) {
+
+    var version = '1.0.0';
+	
     $.DDMenu = function(element, options) {
         this.settings = {
             width: 0
